@@ -6,9 +6,10 @@ import 'package:macos_window_utils/widgets/transparent_macos_bottom_bar.dart';
 import "package:macos_window_utils/window_manipulator.dart";
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await RustLib.init();
 
-  WidgetsFlutterBinding.ensureInitialized();
   await WindowManipulator.initialize();
   WindowManipulator.makeTitlebarTransparent();
   WindowManipulator.enableFullSizeContentView();
@@ -59,6 +60,13 @@ class _MyAppState extends State<MyApp> {
                 Text(
                   'Greet: `$directResult`',
                   textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    color:
+                        MediaQuery.platformBrightnessOf(context) ==
+                            Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
+                  ),
                 ),
 
                 const SizedBox(height: 20),

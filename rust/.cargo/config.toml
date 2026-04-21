@@ -1,0 +1,2 @@
+[alias]
+frbc = "bin flutter_rust_bridge_codegen"

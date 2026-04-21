@@ -1,17 +1,32 @@
-# flutter_rust
+# Flutter🐦 + Rust🦀
+Cross platform desktop apps using Flutter as a UI layer & Rust as a backend layer.
 
-A new Flutter project.
+<div align="center">
+    <img src="./app.jpg" width="768" />
+</div>
 
-## Getting Started
+## Building
+This project uses `cargo-run-bin` to use `wasm-pack` to build from `Cargo.toml` instead of using it globally. This makes sure there's no any "It works on my machine" drama. So make sure to install [cargo-run-bin](https://crates.io/crates/cargo-run-bin) globally:
 
-This project is a starting point for a Flutter application.
+```
+cargo install cargo-run-bin
+```
+#### Install packages
+```
+make install
+```
 
-A few resources to get you started if this is your first Flutter project:
+### Run Rust <-> Flutter bridge codegen server
+```
+make frbc.gen.watch:
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+### Run app
+```
+flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Release build
+```
+flutter build --release
+```
