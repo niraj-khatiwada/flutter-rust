@@ -18,7 +18,7 @@ make install
 
 ### Run Rust <-> Flutter bridge codegen server
 ```
-make frbc.gen.watch:
+make frbc.gen.watch
 ```
 
 ### Run app

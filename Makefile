@@ -11,4 +11,4 @@ flutter.dev.macos:
 	flutter run -d macos
 	
 flutter.build.macos:
-	cd rust && cargo check && cargo frbc generate && cd .. && flutter build -d macos --release
+	cd rust && cargo check && cargo frbc generate && cd .. && flutter build macos --release
